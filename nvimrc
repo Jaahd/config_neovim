@@ -35,6 +35,7 @@ set incsearch           " Incremental search.
 
 "}}}
 
+" whitespace highlight {{{
 " Tell Vim which characters to show for expanded TABs,
 " trailing whitespace, and end-of-lines. VERY useful!
 if &listchars ==# 'eol:$'
@@ -45,7 +46,7 @@ set list                " Show problematic characters.
 " Also highlight all tabs and trailing whitespace characters.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$\|\t/
-
+"}}}
 
 " Vimscript file settings {{{
 augroup filetype_vim
@@ -57,35 +58,47 @@ augroup END
 " plugin to install {{{
 call plug#begin('~/.nvim/plugged')
 
-" syntastic equivalent for neovim
-Plug 'benekastah/neomake'
-
 " color scheme
 Plug 'tomasr/molokai'
 
-" completion cache
+" completion
 Plug 'Shougo/neocomplcache.vim'
-
-" snippets
 Plug 'Shougo/neosnippet-snippets' | Plug 'Shougo/neosnippet.vim'
+Plug 'vim-scripts/OmniCppComplete'
 
-" ctrlp, improved way to open files
+" ide like
 Plug 'kien/ctrlp.vim'
+Plug 'benekastah/neomake'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-fugitive'
+
+" fast editing
+Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
 
 call plug#end()
 " }}}
 
 " set leader
 let mapleader="\<SPACE>"
+nnoremap <Leader>b :set relativenumber!<CR>
 
-" set colorscheme
-colorscheme molokai
-
-" activate syntax checker on save
-autocmd! BufWritePost * Neomake
+colorscheme molokai "colorscheme
 
 " un-highlight
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
+
+" convenient shortcuts
+nnoremap ; :
+nnoremap Q @q
+
+let g:airline_powerline_fonts = 1
+
+" ctrlp {{{
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>f :CtrlPMRUFiles<CR>
+"}}}
 
 " neocomplcache {{{
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
@@ -200,6 +213,10 @@ if has('conceal')
 endif
 "}}}
 
+" neomake {{{
+autocmd! BufWritePost * Neomake " activate syntax checker on save
+"}}}
+
 " filetype {{{
 augroup vimrcEx " {
     au!
@@ -228,6 +245,7 @@ augroup vimrcEx " {
     autocmd FileType python setlocal ts=4 sts=4 sw=4 et ai " Python
     autocmd FileType ocaml setlocal ts=2 sts=2 sw=2 et ai " Ocaml
     autocmd FileType lisp setlocal ts=2 sts=2 sw=2 et ai " Lisp
+    autocmd FileType go setlocal ts=2 sts=2 sw=2 et ai " go
     autocmd BufNewFile,BufRead *.h set ft=c
     autocmd BufNewFile,BufRead *.json set ft=javascript
     autocmd BufNewFile,BufRead *.webapp set ft=javascript
