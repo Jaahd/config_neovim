@@ -71,6 +71,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'benekastah/neomake'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " fast editing
 Plug 'tpope/vim-surround'
@@ -215,6 +216,10 @@ endif
 
 " neomake {{{
 autocmd! BufWritePost * Neomake " activate syntax checker on save
+"}}}
+
+" vim-cpp-enhanced-highlight {{{
+let g:cpp_class_scope_highlight = 1
 "}}}
 
 " filetype {{{
