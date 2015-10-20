@@ -72,6 +72,7 @@ Plug 'benekastah/neomake'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'fatih/vim-go'
 
 " fast editing
 Plug 'tpope/vim-surround'
@@ -222,6 +223,14 @@ autocmd! BufWritePost * Neomake " activate syntax checker on save
 let g:cpp_class_scope_highlight = 1
 "}}}
 
+" vim-go {{{
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+" }}}
+
 " filetype {{{
 augroup vimrcEx " {
     au!
@@ -250,7 +259,7 @@ augroup vimrcEx " {
     autocmd FileType python setlocal ts=4 sts=4 sw=4 et ai " Python
     autocmd FileType ocaml setlocal ts=2 sts=2 sw=2 et ai " Ocaml
     autocmd FileType lisp setlocal ts=2 sts=2 sw=2 et ai " Lisp
-    autocmd FileType go setlocal ts=2 sts=2 sw=2 et ai " go
+    autocmd FileType go setlocal ts=2 sts=2 sw=2 noet ai " go
     autocmd BufNewFile,BufRead *.h set ft=c
     autocmd BufNewFile,BufRead *.json set ft=javascript
     autocmd BufNewFile,BufRead *.webapp set ft=javascript
