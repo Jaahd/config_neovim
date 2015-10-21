@@ -66,5 +66,14 @@ In the font book, create a new lib (right clic, new lib) and add add the font to
 ```
 Édit your config and choose the non-ascii font : you can choose any font that contain "powerline" in it's name and that's it.
 #### 4.2 - other term
-Same as above but I don't know the way to do it. All I know is that the it does not work with urxvt (I'm sad)
-If you've got an issue, report to this : https://powerline.readthedocs.org/en/latest/installation.html#fonts-installation
+Same as above but I don't know the way to do it. If you've got an issue, report to this : https://powerline.readthedocs.org/en/latest/installation.html#fonts-installation
+### III - Licence
+All the content in this repo is under the beer-ware licence
+/*
+ * ----------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <mdelage@student.42.fr> wrote this file. As long as you retain this notice
+ * you can do whatever you want with this stuff. If we meet some day, and you
+ * think this stuff is worth it, you can buy me a beer in return Marc Delage
+ * ----------------------------------------------------------------------------
+ */
