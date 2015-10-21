@@ -55,8 +55,9 @@ cd ~/temp_fonts/
 ./install.sh
 ```
 Then, you need to add the font in your font book, to do so, do the following
-<command-space>
-font book
+```
+<command-space>font Book
+```
 In the font book, create a new lib (right clic, new lib) and add add the font to this library (right clic, add fonts)
 ### 4 - Set the font in your terminal emulator
 #### 4.1 - iTerm on Mac os x
