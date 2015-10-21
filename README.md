@@ -60,7 +60,9 @@ font book
 In the font book, create a new lib (right clic, new lib) and add add the font to this library (right clic, add fonts)
 ### 4 - Set the font in your terminal emulator
 #### 4.1 - iTerm on Mac os x
+```
 <command-o>
+```
 Édit your config and choose the non-ascii font : you can choose any font that contain "powerline" in it's name and that's it.
 #### 4.2 - other term
 Same as above but I don't know the way to do it. All I know is that the it does not work with urxvt (I'm sad)
