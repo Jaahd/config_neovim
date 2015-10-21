@@ -69,11 +69,11 @@ In the font book, create a new lib (right clic, new lib) and add add the font to
 Same as above but I don't know the way to do it. If you've got an issue, report to this : https://powerline.readthedocs.org/en/latest/installation.html#fonts-installation
 ### III - Licence
 All the content in this repo is under the beer-ware licence
-/*
- * ----------------------------------------------------------------------------
- * "THE BEER-WARE LICENSE" (Revision 42):
- * <mdelage@student.42.fr> wrote this file. As long as you retain this notice
- * you can do whatever you want with this stuff. If we meet some day, and you
- * think this stuff is worth it, you can buy me a beer in return Marc Delage
- * ----------------------------------------------------------------------------
- */
+```
+----------------------------------------------------------------------------
+"THE BEER-WARE LICENSE" (Revision 42):
+<mdelage@student.42.fr> wrote this file. As long as you retain this notice
+you can do whatever you want with this stuff. If we meet some day, and you
+think this stuff is worth it, you can buy me a beer in return Marc Delage
+----------------------------------------------------------------------------
+```
