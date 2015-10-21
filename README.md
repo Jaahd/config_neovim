@@ -1,5 +1,5 @@
 # My neovim config
-## I - Install
+## I - Neovim installation
 ### 1 - Linux
 #### 1.1 - Manual
 ```bash
@@ -17,11 +17,16 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
 brew tap neovim/neovim
 brew install --HEAD neovim
 ```
-## II - Add my config
+## II - Add my neovim config
 ### 1 - Get the config
 ```bash
 cd
 git clone git@github.com:geam/config_neovim.git .config_neovim
+ln -sf .config_neovim .nvim
+```
+You need to check that ~/.nvim is the symbolic link you just create. If it's not, delete the dir and recreate the symbolic link
+```bash
+rm -rf .nvim
 ln -sf .config_neovim .nvim
 ```
 ### 2 - Install the packages
@@ -42,3 +47,21 @@ cd temp_fonts
 ```
 The fonts should be installed. If not, check your os documentation for the fonts.
 Use one of these font in your terminal emulator.
+#### 3.1 Mac os x
+On mac os x, you may have an error stating that ~/Library/Fonts doesn't exist, create the dir then relaunch the script
+```bash
+mkdir ~/Library/Fonts
+cd ~/temp_fonts/
+./install.sh
+```
+Then, you need to add the font in your font book, to do so, do the following
+<command-space>
+font book
+In the font book, create a new lib (right clic, new lib) and add add the font to this library (right clic, add fonts)
+### 4 - Set the font in your terminal emulator
+#### 4.1 - iTerm on Mac os x
+<command-o>
+Édit your config and choose the non-ascii font : you can choose any font that contain "powerline" in it's name and that's it.
+#### 4.2 - other term
+Same as above but I don't know the way to do it. All I know is that the it does not work with urxvt (I'm sad)
+If you've got an issue, report to this : https://powerline.readthedocs.org/en/latest/installation.html#fonts-installation
