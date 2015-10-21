@@ -63,7 +63,7 @@ Plug 'tomasr/molokai'
 
 " completion
 Plug 'Shougo/neocomplcache.vim'
-Plug 'Shougo/neosnippet-snippets' | Plug 'Shougo/neosnippet.vim'
+Plug 'geam/neosnippet-snippets' | Plug 'Shougo/neosnippet.vim'
 Plug 'vim-scripts/OmniCppComplete'
 
 " ide like
@@ -215,9 +215,22 @@ if has('conceal')
 endif
 "}}}
 
-" neomake {{{
-autocmd! BufWritePost * Neomake " activate syntax checker on save
-"}}}
+" neomake {{{1
+autocmd! BufWritePost * Neomake! " activate syntax checker on save
+
+" go maker {{{2
+let g:neomake_go_gobuild_maker = {
+    \ 'exe': 'sh',
+    \ 'args': ['-c', 'go build -o ' . neomake#utils#DevNull() . ' ./\$0', '%:h'],
+    \ 'errorformat':
+        \ '%W%f:%l: warning: %m,' .
+        \ '%E%f:%l:%c:%m,' .
+        \ '%E%f:%l:%m,' .
+        \ '%C%\s%\+%m,' .
+        \ '%-G#%.%#'
+    \ }
+" }}}2
+"}}}1
 
 " vim-cpp-enhanced-highlight {{{
 let g:cpp_class_scope_highlight = 1
