@@ -68,7 +68,10 @@ In the font book, create a new lib (right clic, new lib) and add add the font to
 #### 4.2 - other term
 Same as above but I don't know the way to do it. If you've got an issue, report to this : https://powerline.readthedocs.org/en/latest/installation.html#fonts-installation
 ### III - Licence
-All the content in this repo is under the beer-ware licence
+#### autoload/plug.vim
+autoload/plug.vim is an asynchronous plugin manager (https://github.com/junegunn/vim-plug), it comes under the MIT licence
+#### The rest
+The files nvimrc and README.md are under the beer-ware licence.
 ```
 ----------------------------------------------------------------------------
 "THE BEER-WARE LICENSE" (Revision 42):
