@@ -23,6 +23,7 @@ set autoread                     " watch if the file is modified outside of vim
 
 set wildmenu
 set wildmode=longest:list,full
+set wildignore=*.o,*.out,*.obj,*.pyc,.git,.hgignore,.svn,.cvsignore
 
 set ignorecase
 set smartcase
@@ -33,6 +34,11 @@ set ignorecase          " Make searching case insensitive
 set smartcase           " ... unless the query has capital letters.
 set incsearch           " Incremental search.
 
+set colorcolumn=80      " color column at 80 columns
+
+" Put all backup and swap in one place
+set backupdir=~/.nvim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.nvim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 "}}}
 
 " whitespace highlight {{{
@@ -46,6 +52,13 @@ set list                " Show problematic characters.
 " Also highlight all tabs and trailing whitespace characters.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$\|\t/
+
+" Highlighting spaces and tabulations
+" (\zs & \ze == start and end of match, \s == any space)
+match ErrorMsg '\s\+$'           " Match trailing whitespace
+match ErrorMsg '\ \+\t'          " & spaces before a tab
+match ErrorMsg '[^\t]\zs\t\+'    " & tabs not at the begining of a line
+match ErrorMsg '\[^\s\]\zs\ \{2,\}' " & 2+ spaces not at the begining of a line
 "}}}
 
 " Vimscript file settings {{{
@@ -100,6 +113,9 @@ let g:airline_powerline_fonts = 1
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
+
+" set the ignore file for ctrlp plugin
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 "}}}
 
 " neocomplcache {{{
