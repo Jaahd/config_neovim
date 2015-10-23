@@ -104,7 +104,6 @@ colorscheme molokai "colorscheme
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 " convenient shortcuts
-nnoremap ; :
 nnoremap Q @q
 
 let g:airline_powerline_fonts = 1
