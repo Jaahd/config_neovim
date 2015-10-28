@@ -6,7 +6,7 @@
 cd
 git clone git@github.com:neovim/neovim.git
 cd neovim
-make
+make CMAKE_BUILD_TYPE=Release
 make install
 ```
 #### 1.2 - Distro specific
@@ -22,9 +22,12 @@ brew install --HEAD neovim
 ```bash
 cd
 git clone git@github.com:geam/config_neovim.git .config_neovim
-ln -sf .config_neovim .nvim
+if [[ ! -d "$HOME/.config" ]]; then
+	mkdir $HOME/.config
+fi
+ln -sf .config_neovim .config/nvim
 ```
-You need to check that ~/.nvim is the symbolic link you just create. If it's not, delete the dir and recreate the symbolic link
+You need to check that ~/.config/nvim is the symbolic link you just create. If it's not, delete the dir and recreate the symbolic link
 ```bash
 rm -rf .nvim
 ln -sf .config_neovim .nvim
