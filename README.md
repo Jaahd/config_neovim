@@ -42,6 +42,13 @@ Then use the command
 :PlugInstall
 ```
 ### 3 - Add the correct font for the status line
+The fonts need to be installed on the client pc, so if you use neovim on a server, the font need to be installed on your computer and not on the serveur/
+#### 3.1 Archlinux
+```bash
+yaourt -S powerline-fonts-git
+```
+#### 3.2 Others
+Note that I only test that on mac os x cause I only have an archlinux and mac os X at school..
 ```bash
 cd
 git clone https://github.com/powerline/fonts temp_fonts
@@ -50,7 +57,7 @@ cd temp_fonts
 ```
 The fonts should be installed. If not, check your os documentation for the fonts.
 Use one of these font in your terminal emulator.
-#### 3.1 Mac os x
+##### 3.2.1 Mac os x
 On mac os x, you may have an error stating that ~/Library/Fonts doesn't exist, create the dir then relaunch the script
 ```bash
 mkdir ~/Library/Fonts
