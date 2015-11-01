@@ -105,7 +105,7 @@ nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 " convenient shortcuts
 nnoremap Q @q
-
+nnoremap K :Man <cword><CR>
 let g:airline_powerline_fonts = 1
 
 " ctrlp {{{
