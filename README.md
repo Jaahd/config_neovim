@@ -25,7 +25,7 @@ cd
 if [[ ! -d "$HOME/.config" ]]; then
 	mkdir $HOME/.config
 fi
-git clone git@github.com:geam/config_neovim.git nvim
+git clone git@github.com:geam/config_neovim.git $HOME/.config/nvim
 ```
 ### 2 - Install the packages
 Start neovim
