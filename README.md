@@ -1,7 +1,8 @@
 # My neovim config
 ## I - Neovim installation
-### 1 - Linux
-#### 1.1 - Manual
+This step may take some time, you should do II-1, II-3 and II-4 at the same time.
+### Linux
+#### Manual
 ```bash
 cd
 git clone git@github.com:neovim/neovim.git
@@ -9,10 +10,10 @@ cd neovim
 make CMAKE_BUILD_TYPE=Release
 make install
 ```
-#### 1.2 - Distro specific
+#### Distro specific
 Some distro have a way to install neovim using their package manager, report to doc.
 https://github.com/neovim/neovim/wiki/Installing-Neovim
-### 2 - Mac os x
+### Mac os x
 ```bash
 brew tap neovim/neovim
 brew install --HEAD neovim
@@ -21,16 +22,10 @@ brew install --HEAD neovim
 ### 1 - Get the config
 ```bash
 cd
-git clone git@github.com:geam/config_neovim.git .config_neovim
 if [[ ! -d "$HOME/.config" ]]; then
 	mkdir $HOME/.config
 fi
-ln -sf .config_neovim .config/nvim
-```
-You need to check that ~/.config/nvim is the symbolic link you just create. If it's not, delete the dir and recreate the symbolic link
-```bash
-rm -rf .nvim
-ln -sf .config_neovim .nvim
+git clone git@github.com:geam/config_neovim.git $HOME/.config/nvim
 ```
 ### 2 - Install the packages
 Start neovim
