@@ -120,6 +120,8 @@ nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
 " set the ignore file for ctrlp plugin
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "}}}
 
 " neocomplcache {{{
@@ -293,6 +295,7 @@ augroup vimrcEx " {
     autocmd FileType ocaml setlocal ts=2 sts=2 sw=2 et ai " Ocaml
     autocmd FileType lisp setlocal ts=2 sts=2 sw=2 et ai " Lisp
     autocmd FileType go setlocal ts=2 sts=2 sw=2 noet ai " go
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et ai "yaml
     autocmd BufNewFile,BufRead *.h set ft=c
     autocmd BufNewFile,BufRead *.json set ft=javascript
     autocmd BufNewFile,BufRead *.webapp set ft=javascript
