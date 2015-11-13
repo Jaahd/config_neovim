@@ -37,8 +37,8 @@ set incsearch           " Incremental search.
 set colorcolumn=80      " color column at 80 columns
 
 " Put all backup and swap in one place
-set backupdir=~/.nvim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.nvim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupdir=~/.config/nvim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.config/nvim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 "}}}
 
 " whitespace highlight {{{
@@ -69,7 +69,7 @@ augroup END
 " }}}
 
 " plugin to install {{{
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " color scheme
 Plug 'tomasr/molokai'
@@ -80,7 +80,7 @@ Plug 'geam/neosnippet-snippets' | Plug 'Shougo/neosnippet.vim'
 Plug 'vim-scripts/OmniCppComplete'
 
 " ide like
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'benekastah/neomake'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'

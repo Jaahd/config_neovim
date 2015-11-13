@@ -1,6 +1,11 @@
 # My neovim config
-## I - Neovim installation
-This step may take some time, you should do II-1, II-3 and II-4 at the same time.
+## I - Changelog
+- 13/11/2015 :
+    - change ctrlp source (you need to delete current ctrlp dir and redo PlugInstall)
+    - move from ~/.nvim to ~/.config/nvim even for plugins
+
+## II - Neovim installation
+This step may take some time, you should do III-1, III-3 and III-4 at the same time.
 ### Linux
 #### Manual
 ```bash
@@ -18,7 +23,7 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
 brew tap neovim/neovim
 brew install --HEAD neovim
 ```
-## II - Add my neovim config
+## III - Add my neovim config
 ### 1 - Get the config
 ```bash
 cd
@@ -72,7 +77,7 @@ In the font book, create a new lib (right clic, new lib) and add add the font to
 Édit your config and choose the non-ascii font : you can choose any font that contain "powerline" in it's name and that's it.
 #### 4.2 - other term
 Same as above but I don't know the way to do it. If you've got an issue, report to this : https://powerline.readthedocs.org/en/latest/installation.html#fonts-installation
-### III - Licence
+### IV - Licence
 #### autoload/plug.vim
 autoload/plug.vim is an asynchronous plugin manager (https://github.com/junegunn/vim-plug), it comes under the MIT licence
 #### The rest
