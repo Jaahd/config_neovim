@@ -3,6 +3,7 @@
 - 13/11/2015 :
     - change ctrlp source (you need to delete current ctrlp dir and redo PlugInstall)
     - move from ~/.nvim to ~/.config/nvim even for plugins
+    - ctrlp now ignore files listed in .gitignore
 
 ## II - Neovim installation
 This step may take some time, you should do III-1, III-3 and III-4 at the same time.
