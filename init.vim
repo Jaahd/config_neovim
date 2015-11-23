@@ -108,6 +108,8 @@ nnoremap Q @q
 nnoremap K :Man <cword><CR>
 let g:airline_powerline_fonts = 1
 
+nnoremap <Leader>s bvey/<C-R>"<CR><Esc>
+
 " terminal mode {{{
 tnoremap <Esc> <C-\><C-n>
 nnoremap <Leader>t :vsp term://zsh<CR>i
