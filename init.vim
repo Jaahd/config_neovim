@@ -108,7 +108,11 @@ nnoremap Q @q
 nnoremap K :Man <cword><CR>
 let g:airline_powerline_fonts = 1
 
+" search word under cursor
 nnoremap <Leader>s bvey/<C-R>"<CR><Esc>
+
+" no mouse
+set mouse=
 
 " terminal mode {{{
 tnoremap <Esc> <C-\><C-n>

@@ -1,6 +1,8 @@
 # My neovim config
 ## I - Changelog
-- 23/11/2013 :
+- 05/12/2015 :
+    - remove mouse
+- 23/11/2015 :
     - add word search shortcut (<Leader>s)
 - 13/11/2015 :
     - change ctrlp source (you need to delete current ctrlp dir and redo PlugInstall)
