@@ -1,5 +1,7 @@
 # My neovim config
 ## I - Changelog
+- 21/12/2015 :
+    - modify neomake configuration (doesn't run make now)
 - 05/12/2015 :
     - remove mouse
 - 23/11/2015 :

@@ -245,7 +245,7 @@ endif
 "}}}
 
 " neomake {{{1
-autocmd! BufWritePost * Neomake! " activate syntax checker on save
+autocmd! BufWritePost,BufEnter * Neomake " activate syntax checker on save
 
 " go maker {{{2
 let g:neomake_go_gobuild_maker = {
