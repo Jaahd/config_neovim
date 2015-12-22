@@ -1,5 +1,7 @@
 # My neovim config
 ## I - Changelog
+- 22/12/2015 :
+    - autoinstall plug and do not put it in git repo
 - 21/12/2015 :
     - modify neomake configuration (doesn't run make now)
 - 05/12/2015 :
