@@ -1,5 +1,8 @@
 # My neovim config
 ## I - Changelog
+- 03/02/2016 :
+    - replace bling/vim-airline with vim-airline/vim-airline
+    - add vim-airline-themes
 - 22/12/2015 :
     - autoinstall plug and do not put it in git repo
 - 21/12/2015 :
