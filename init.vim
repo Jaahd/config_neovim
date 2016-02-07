@@ -79,7 +79,8 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " color scheme
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
+Plug 'fabi1cazenave/kalahari.vim'
 
 " completion
 Plug 'Shougo/neocomplcache.vim'
@@ -106,7 +107,8 @@ call plug#end()
 let mapleader="\<SPACE>"
 nnoremap <Leader>r :set relativenumber!<CR>
 
-colorscheme molokai "colorscheme
+" colorscheme molokai "colorscheme
+colorscheme kalahari "colorscheme
 
 " un-highlight
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
