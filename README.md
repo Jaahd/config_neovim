@@ -22,7 +22,7 @@ This step may take some time, you should do III-1, III-3 and III-4 at the same t
 #### Manual
 ```bash
 cd
-git clone git@github.com:neovim/neovim.git
+git clone https://github.com/neovim/neovim.git
 cd neovim
 make CMAKE_BUILD_TYPE=Release
 make install
